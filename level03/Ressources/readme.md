@@ -5,9 +5,10 @@ Home directory : \[✓\] not empty.
 
 This time, we found a binary file which we run:
 
-> ./level03
-> Exploit me
-
+```
+$ ./level03
+$ Exploit me
+```
 
 ## Exploit it.
 
