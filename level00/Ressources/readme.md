@@ -17,6 +17,7 @@ User flag00 has access to 2 similar files.
 > /rofs/usr/sbin/john
 
 They both contain an str: `cdiiddwpgswtgt`
+
 Unfortunaltely, it's not the password we're looking for.
 Maybe it's encrypted.
 Using [dcode](https://www.dcode.fr), we tried randomly the decryption tools.
