@@ -1,19 +1,31 @@
-cat /etc/passwd
+# Find the password of Flag00
 
-# We notice that there is a user with the name 'flag00' but no password
+## First check :
+Home directory : \[x\] empty.
 
-# We searched for the files owned by flag00:
-find / -user flag00 2> /dev/null
+## Second check :
+We checked the /etc/passwd with no results.
+We thought about looking for files owned by flag00.
 
-# For the result:
-/usr/sbin/john
-/rofs/usr/sbin/john
+> find / -user flag00 2> /dev/null
 
-# We Cat'ed both the files, we notice they contain the same string: cdiiddwpgswtgt
-# We tested this string as a password to access the flag00 but didn't worked :(
-# So we thinked that is a sort of a crypted password
+## Results:
 
-# We used the famous Website 'www.decode.fr', we tried the Cesar Cipher Identifier (ROT15)
-# We saw for the 15 param an understandable words: nottoohardhere
+User flag00 has access to 2 similar files.
 
-# We used this result and TADAAAAAAA
+> /usr/sbin/john
+> /rofs/usr/sbin/john
+
+They both contain an str: `cdiiddwpgswtgt`
+Unfortunaltely, it's not the password we're looking for.
+Maybe it's encrypted.
+Using [dcode](https://www.dcode.fr), we tried randomly the decryption tools.
+
+The Cesar Cipher Identifier (ROT15) gave a readable string of the file: `nottoohardhere`
+
+## TADAAAAAAA, It's indeed the flag00 password !
+
+_tobecontinued_
+
+> getflag
+> [next level flag](https://github.com/XD-OB/snowcrash/blob/master/level00/flag)

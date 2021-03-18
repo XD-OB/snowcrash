@@ -1,6 +1,19 @@
-# We noticed that there is only file with the extension: 'pcap'
-# We did some research and found that it's a pcap files are data files created using the program and they contain the packet data of a network
-# And we can open it with: Wireshark
+# Find the password of Flag02
 
-# Using Follow TCP Stream we founded the characteres taped during login: 'ft_waNDReL0L'
-# We used to get the flag TADAAAAAAAAA
+## First check :
+Home directory : \[✓\] not empty.
+
+Unlike the previous levels, we found a file with the `.pcap` extension.
+
+## Google it.
+
+[pcap](https://en.wikipedia.org/wiki/Pcap) files are data files where the packet data of a network is stored. To open it, we copied the file to our local machine `scp -P 4242 level02@localhost:/home/user/level02/level02.pcap .` and used [Wireshark].
+
+We examined the data flowing between the client & the server i.e `Follow TCP Stream`, and found the characters typed during a login. After removing the deleted charachters (*as backspace is represented by dots*) we got `ft_waNDReL0L` .
+
+## TADAAAAAAA, It's indeed the flag02 password !
+
+_tobecontinued_
+
+> getflag
+> [next level flag](https://github.com/XD-OB/snowcrash/blob/master/level02/flag)
