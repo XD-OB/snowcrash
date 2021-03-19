@@ -17,8 +17,10 @@ Turned out there is a famous password cracker called [John The Ripper](https://a
 ...
 ...
 
-> ./john "42jkfhgjkf"
+```
+./john "42jkfhgjkf"
 > abcdefg
+```
 
 ## TADAAAAAAA, It's indeed the flag01 password !
 
