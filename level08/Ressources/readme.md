@@ -22,8 +22,8 @@ So, let's try it with the token file.
 > 'You may not access token'
 ```
 
-Even with the binary that have full permission, it couldn't access it.
-We doubted that the problem is in the name of the file, not the access rights.
+Even with a file that have all the access rights permission, it couldn't access it.
+We doubted that the problem is in the name of the file, not the rights.
 
 ```
 echo 'filecontent' > filename
