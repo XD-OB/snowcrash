@@ -4,8 +4,8 @@
 Home directory : \[x\] empty.
 
 ## Second check :
-We checked the /etc/passwd with no results.
-We thought about looking for files owned by flag00.
+We checked the `/etc/passwd` with no results.
+We thought about looking for files owned by **flag00**.
 
 > find / -user flag00 2> /dev/null
 
