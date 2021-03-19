@@ -26,7 +26,6 @@ also ...
 ```
 ./level09 aaaaaaaa
 > abcdefgh
-
 ```
 
 ## Guess what ?
