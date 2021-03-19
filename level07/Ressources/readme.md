@@ -1,4 +1,4 @@
-# Find the password of Flag06
+# Find the password of Flag07
 
 ## First check :
 Home directory : \[✓\] not empty.
