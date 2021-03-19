@@ -18,7 +18,7 @@ We first tried it with a simple file we created, it returned our file's content.
 So, let's try it with the token file.
 
 ```
-./level08` token
+./level08 token
 > 'You may not access token'
 ```
 
