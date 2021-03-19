@@ -1,27 +1,48 @@
-chmod 777 .
+# Find the password of Flag08
 
-# We found:
+## First check :
+Home directory : \[✓\] not empty.
 - ./level08
 - token
 
-# It's obvious the file 'token' has the token XD
-# But don't have permission to 'cat' it
+## My home, my rules.
 
-# We tested with a simple file and got the content
+```
+chmod 777 .
+```
 
-# We try it with 'token' but we got the message:
-'You may not access token'
-# Even with the binary that have full permission can't access it, we doubt that the problem is the name of the file
-# To prove it
-echo 'test' > t
-chmod -rwx t
-./level08 t     ==> We got: Permission denied!
+## Run it :
+To run the `./level08` properly, it needs a file, which might be `token`, which also contains the token obviously, or maybe ... ?
 
-# So we changed the name of 'token'
-mv token boken
+We first tried it with a simple file we created, it returned our file's content.
+So, let's try it with the token file.
 
-./level08 boken     ==> password
-# Connect to user 'flag08' using the 'password'
-getflag
+```
+./level08` token
+> 'You may not access token'
+```
 
-# TADAAAAAAA
+Even with the binary that have full permission, it couldn't access it.
+We doubted that the problem is in the name of the file, not the access rights.
+
+```
+echo 'filecontent' > filename
+chmod -rwx filename
+./level08 filename
+> Permission denied
+```
+
+We'll definitely change the token file name and test.
+
+```
+mv token broken
+./level08 broken
+```
+
+aand ... 
+## TADAAAAAAA, It's indeed the flag08 password !
+
+_tobecontinued_
+
+> getflag
+> [next level flag](https://github.com/XD-OB/snowcrash/blob/master/level08/flag)
