@@ -13,8 +13,10 @@ We thought about looking for files owned by flag00.
 
 User flag00 has access to 2 similar files.
 
+```
 > /usr/sbin/john
 > /rofs/usr/sbin/john
+```
 
 They both contain an str: `cdiiddwpgswtgt`
 
