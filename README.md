@@ -3,11 +3,10 @@ Snowcrash is an introductory Cyber Security project, consisting of a virtual mac
 You have to find a password (flag), for each level to advance to the next.
 Some challenges.
 The objectives of this project is understanding `Perl/Python/Shell Scripts`, reversing executables by reading `ASM` disassembly, and general `unix` and filesystem `Security`
-### Objectives:
-- Perl/Python/Shell scripts
-- ASM
-- Security
-### Skills:
-`Security ` 
-`Unix `
-`Adaptation & creativity `
+### Setup the VM:
+Use the iso provided in the subject, set the network to bridged to make access to ssh and levels with web easier.
+### SSH / SCP
+```
+ssh -p 4242 levelXX@<ip>
+scp -P 4242 levelXX@<ip>:/path/on/the/vm ./path/on/your/machine
+```
