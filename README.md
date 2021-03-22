@@ -2,7 +2,10 @@
 Snowcrash is an introductory Cyber Security project, consisting of a virtual machine, containing multiple levels and users.
 You have to find a password (flag), for each level to advance to the next.
 Some challenges.
-The objectives of this project is understanding `Perl/Python/Shell Scripts`, reversing executables by reading `ASM` disassembly, and general `unix` and filesystem `Security`
+#### Objectives:
+- Learn to read and write `Perl/Python/Shell scripts`
+- Deeply understand `Unix file permissions`, bad practices and how to exploit them.
+- Vulnerabilities in `Standard C library` functions and `syscalls`
 ### Setup the VM:
 Use the iso provided in the subject, set the network to bridged to make access to ssh and levels with web easier.
 ### SSH / SCP
