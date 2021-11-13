@@ -20,7 +20,7 @@ We create the following script in the `/opt/openarenaserver/` directory.
 ```
 #!/bin/sh
 
-echo getflag > /tmp/flag
+/bin/getflag > /tmp/flag
 ```
 
 Once it's run and deleted, we simply cat the `/tmp/flag`
