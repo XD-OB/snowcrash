@@ -18,7 +18,7 @@ Turned out there is a famous password cracker called [John The Ripper](https://a
 ...
 
 ```
-./john "42jkfhgjkf"
+./john < echo "flag01:42hDRfypTqqnw:3001:3001::/home/flag/flag01:/bin/bash"
 > abcdefg
 ```
 
